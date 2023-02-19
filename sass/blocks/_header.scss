@@ -23,6 +23,7 @@
     &__menu-btn {
         border: none;
         background: transparent;
+        cursor: pointer;
     }
 
     &__menu {
@@ -61,6 +62,10 @@
         }
     }
 
+    &__search--input {
+        display: none;
+    }
+
     &__list {
         display: flex;
     }
@@ -74,8 +79,31 @@
         }
     }
 
+    &__navigation--addtion {
+        display: flex;
+        display: none;
+    }
+
+    &__menu--addition {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // float: left;
+    }
+
+    &__menu--addition__item {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        a {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 21px;
+            color: $--text-color;
+        }
+    }
 }
 
-.header__search--input {
-    display: none;
-}
+@media only screen and (max-width: 780px) {}
