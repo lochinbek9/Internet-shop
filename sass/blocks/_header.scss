@@ -1,4 +1,81 @@
+// SITE-HEADER
 
-h1{
-    color: red;
+.header {
+    height: 900px;
+    background-image:
+        url("../../img/header-back-left.png"),
+        url("../../img/header-back-center.png"),
+        url("../../img/header-back-right.png");
+    background-position: 0 0, 480px 0px, 960px 0;
+    background-size: 480px 900px;
+    background-repeat: no-repeat;
+
+    &__container {
+        padding: 33px 0 393px 0;
+    }
+
+    &__navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menu-btn {
+        border: none;
+        background: transparent;
+    }
+
+    &__menu {
+        display: flex;
+    }
+
+    &__menu--item {
+        font-family: $--main-font-family;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    &__menu--item+&__menu--item {
+        padding-left: 25px;
+    }
+
+    &__menu--item a {
+        color: $--text-color;
+    }
+
+    &__select--lang {
+        padding-right: 25px;
+        background-color: transparent;
+        color: $--text-color;
+        border: none;
+        outline: none;
+        background-image: url(../../img/down-icon.png);
+        background-repeat: no-repeat;
+        background-position: 25px;
+
+        option {
+            color: $--main-color;
+            background: transparent;
+        }
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__list--item {
+        padding-right: 30px;
+
+        button {
+            background: transparent;
+            border: none;
+        }
+    }
+
+}
+
+.header__search--input {
+    display: none;
 }
