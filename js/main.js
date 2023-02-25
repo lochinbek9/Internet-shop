@@ -2,10 +2,11 @@
 
 // SITE-LOADING
 
+const headerSearch = document.querySelector(".header__search--form img");
+
 window.addEventListener("DOMContentLoaded", () => {
   const loader = document.querySelector(".lds-hourglass");
   setTimeout(() => {
-    loader.style.opacity = 0;
     loader.style.display = "none";
   }, 5000);
 });
@@ -25,4 +26,10 @@ headerMenuBtn.addEventListener("click", () => {
 headerNavigationAddtion.addEventListener("click", () => {
   headerNavigationAddtion.style.display = "none";
   headerNavbar.style.display = "flex";
+});
+
+const headerSearchInput = document.querySelector(".header__search--input");
+
+headerSearch.addEventListener("click", () => {
+  headerSearchInput.classList.toggle("visually-hidden");
 });

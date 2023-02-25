@@ -1,13 +1,14 @@
 // SITE-HEADER
 
 .header {
+    width: 100%;
     height: 900px;
     background-image:
         url("../../img/header-back-left.png"),
         url("../../img/header-back-center.png"),
         url("../../img/header-back-right.png");
-    background-position: 0 0, 480px 0px, 960px 0;
-    background-size: 480px 900px;
+    background-position: 0% 0%, 50% 0px, 100% 0;
+    background-size: 35% 900px, 34% 900px, 33% 900px;
     background-repeat: no-repeat;
 
     &__container {
@@ -18,6 +19,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        transition: 0.8s;
     }
 
     &__menu-btn {
@@ -63,46 +65,85 @@
     }
 
     &__search--input {
-        display: none;
+        padding-left: 10px;
+        width: 205px;
+        height: 30px;
+        border: 0.5px solid #252525;
+        outline: none;
+        transition: 0.8s;
     }
 
-    &__list {
-        display: flex;
-    }
+    // &__registration--item {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     justify-content: center;
+    // }
 
-    &__list--item {
-        padding-right: 30px;
+    &__registration--box {
+        padding-right: 20px;
+        width: 600px;
+        height: 382px;
+        background-color: white;
 
-        button {
-            background: transparent;
-            border: none;
+        img {
+            position: relative;
+            top: 20px;
+            left: 95%;
+            cursor: pointer;
         }
+
     }
 
-    &__navigation--addtion {
-        display: flex;
-        display: none;
+    &__registration--text {
+        text-align: center;
     }
 
-    &__menu--addition {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        // float: left;
+    &__registration--email {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        padding-left: 50px;
     }
 
-    &__menu--addition__item {
-        padding-left: 25px;
-        padding-right: 25px;
+}
 
-        a {
-            font-family: 'Raleway';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 21px;
-            color: $--text-color;
-        }
+&__list {
+    display: flex;
+}
+
+&__list--item {
+    padding-right: 30px;
+
+    button {
+        background: transparent;
+        border: none;
+    }
+}
+
+&__navigation--addtion {
+    display: flex;
+    display: none;
+}
+
+&__menu--addition {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // float: left;
+}
+
+&__menu--addition__item {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    a {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        color: $--text-color;
     }
 }
 
